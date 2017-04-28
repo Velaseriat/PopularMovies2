@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.avanti.velaseriat.popularmovies.MovieDetailActivity">
+
+    <!-- The background imageview was obtained from http://stackoverflow.com/questions/20928748/using-imageview-as-background-for-an-android-layout -->
+    <ImageView
+        style="@style/MovieDetailBackGroundImageView"
+        android:id="@+id/iv_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:id="@+id/sv_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ib_favorite_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_star_big_off" />
+
+            <TextView
+                android:id="@+id/tv_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_detail_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_detail_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_detail_synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent" />
+
+
+
+            <FrameLayout
+                android:layout_marginTop="15dp"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trailers_header"
+                android:textColor="@color/colorAccent"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_trailers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:layout_marginTop="15dp"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reviews_header"
+                android:textColor="@color/colorAccent"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
